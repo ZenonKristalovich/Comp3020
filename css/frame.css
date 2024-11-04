@@ -1,0 +1,172 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Copperplate Gothic', 'Georgia', serif; 
+    position: relative;
+    overflow: hidden; /* Prevent scrolling */
+    background-image: url('../images/home_background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Style the main content */
+main {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Ensure the buttons remain above the title bar */
+.square-button {
+    position: absolute;
+    width: 275px; /* Set width */
+    height: 275px; /* Set height */
+    background-image: url('../images/red_button.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    z-index: 2; /* Ensure it is above the title bar */
+    display: flex; /* Enables flexbox for centering text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    color: white; 
+    font-size: 18px; 
+    transform: rotate(45deg); 
+}
+
+/* Hover effect for buttons */
+.square-button:hover {
+    transform: scale(1.05) rotate(45deg); 
+}
+
+/* Positioning the squares as diamonds in the corners */
+#top-left {
+    top: -150px; 
+    left: -150px; 
+}
+
+#top-right {
+    top: -150px; 
+    right: -150px; 
+}
+
+#bottom-left {
+    bottom: -150px; 
+    left: -150px; 
+}
+
+#bottom-right {
+    bottom: -150px; 
+    right: -150px; 
+}
+
+/* Specific text for each button */
+#top-left::after {
+    content: 'Search';
+    font-size: 36px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(75%, 00%) rotate(-90deg);
+}
+
+#top-right::after {
+    content: 'Cart';
+    font-size: 36px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(0%, 290%) rotate(0deg);
+}
+
+#bottom-left::after {
+    content: 'New Releases';
+    align-items: center; 
+    justify-content: center; 
+    font-size: 20px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(0%, -510%) rotate(0deg);
+}
+
+#bottom-right::after {
+    content: 'Trending';
+    font-size: 32px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-70%, 00%) rotate(-90deg);
+}
+
+/* BAR */
+
+/* Title bar styling */
+.title-bar {
+    position: absolute; /* Position it at the top */
+    top: 0; 
+    left: 0; 
+    width: 100%; /* Full width */
+    height: 40px; /* Height of the bar */
+    background-image: url('../images/black_bar.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1; /* Behind the buttons */
+}
+
+/* Style for the second title bar */
+.second-title-bar {
+    display: flex; 
+    justify-content: space-between; /* Space between buttons */
+    align-items: center; 
+    width: 100%; /* Full width */
+    height: 40px; /* Height of the bar */
+    background-color: rgba(50, 50, 50, 0.8); 
+    padding: 0; 
+    position: absolute; /* Positioning it below the first title bar */
+    top: 40px; 
+    z-index: 1; /* Ensure it's above the background */
+}
+
+/* Style for the buttons */
+.side-button {
+    background-color: #393636; 
+    color: white; 
+    border: none; 
+    padding: 7px 200px; 
+    font-family: 'Copperplate Gothic', 'Georgia', serif; 
+    font-size: 24px; 
+    font-weight: bold;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; 
+    width: 50%; /* Set width to 50% to fill half of the bar */
+}
+
+/* Align buttons */
+.left-button {
+    border-radius: 0 0 0 20px; 
+    text-align: right; 
+}
+
+.right-button {
+    border-radius: 0 0 20px 0; 
+    text-align: left;
+}
+
+/* Button hover effect */
+.side-button:hover {
+    background-color: #4a4848; 
+}
