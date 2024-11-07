@@ -1,0 +1,82 @@
+/* Centering the "Select Your Sport" text */
+.center-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    position: absolute; /* Keep this absolute to center it */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Higher than other elements */
+    pointer-events: none; /* Disable mouse interaction for text */
+}
+
+/* Ensure the text itself is visible */
+.center-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin: 0; /* Remove default margins */
+    pointer-events: auto; /* Re-enable mouse interaction for the text itself */
+}
+
+/* Add some spacing between the headings if desired */
+.center-content h2 + h2 {
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+
+/* Icon circle container */
+.icon-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; /* Adjust size for the circle */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the circle container is beneath the icon buttons */
+}
+
+/* Each icon button */
+.icon-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Ensure absolute positioning for circular layout */
+    pointer-events: auto; /* Allows clicks on buttons */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 2; /* Ensure icon buttons are clickable */
+}
+
+/* Ensure images fill the icon buttons properly */
+.icon-button img {
+    width: 100%; /* Make the image fill the button */
+    height: 100%; /* Ensure it scales to the size of the button */
+    object-fit: cover; /* Ensure the image covers the button area without distortion */
+}
+
+/* Arrange buttons in a circular layout for 8 buttons */
+.icon-button:nth-child(1) { top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(-160px); } /* Top (0°) */
+.icon-button:nth-child(2) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(113px, -113px); } /* Top Right (45°) */
+.icon-button:nth-child(3) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(160px, 0); } /* Right (90°) */
+.icon-button:nth-child(4) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(113px, 113px); } /* Bottom Right (135°) */
+.icon-button:nth-child(5) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(0, 160px); } /* Bottom (180°) */
+.icon-button:nth-child(6) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-113px, 113px); } /* Bottom Left (225°) */
+.icon-button:nth-child(7) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-160px, 0); } /* Left (270°) */
+.icon-button:nth-child(8) { top: 50%; left: 50%; transform: translate(-50%, -50%) translate(-113px, -113px); } /* Top Left (315°) */
+
+/* Optional: Darken image when hovering */
+.icon-button:hover img {
+    filter: brightness(70%); /* Darken the image on hover */
+}
+
+
