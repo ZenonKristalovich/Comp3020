@@ -6,6 +6,7 @@
     <meta name="description" content="Starter page for your web application">
     <title>Home Page</title>
     <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/search.css">
     <script defer src="scripts.js"></script>
 </head>
 <body>
@@ -16,11 +17,30 @@
     <!-- Square buttons rotated to look like diamonds -->
     <div id="top-left" class="square-button" onclick="hitButton()"></div>
     <div id="top-right" class="square-button" onclick="hitButton()"></div>
-    <div id="search-bar">
-        <input type="text" placeholder="search">
+
+    <div class="container">
+        <!-- Search Bar -->
+        <div id="search-bar">
+            <input type="text" placeholder="Search for products..." class="bar">
+            <button type="button" class="search-btn">Search</button>
+        </div>
+        
+        <!-- Filter Section -->
+        <div id="filter">
+            <h3>Filter Options</h3>
+            <ul>
+                <li><input type="checkbox" id="filter1"> <label for="filter1">Filter 1</label></li>
+                <li><input type="checkbox" id="filter2"> <label for="filter2">Filter 2</label></li>
+                <li><input type="checkbox" id="filter3"> <label for="filter3">Filter 3</label></li>
+            </ul>
+        </div>
+        
+        <!-- Search Results Section -->
+        <div id="results">
+            <h3>Search Results</h3>
+            <!-- Content for search results goes here -->
+        </div>
     </div>
-    <div id="filter"></div>
-    <div id="results"></div>
 
     <script>
         function hitButton() {
