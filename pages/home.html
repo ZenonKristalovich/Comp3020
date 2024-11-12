@@ -7,16 +7,17 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="../css/frame.css">
     <link rel="stylesheet" href="../css/home.css">
-    <script defer src="scripts.js"></script>
+    <script defer src="../javascript/home.js"></script>
+
 </head>
 <body>
     <div class="title-bar">
-        <h1>Athlete Avenue</h1>
+        <h1>NextGen Sports</h1>
     </div>
 
     <div class="second-title-bar">
-        <button class="side-button left-button">Jerseys</button>
-        <button class="side-button right-button">Equipment</button>
+        <button class="side-button left-button" onclick="setFilter('jersey')">Jerseys</button>
+        <button class="side-button right-button" onclick="getFilter()">Equipment</button>
     </div>
 
     <!-- Square buttons rotated to look like diamonds -->
@@ -45,10 +46,5 @@
         <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Volleyball"></div>
     </div>
 
-    <script>
-        function hitButton() {
-            alert('You hit a button');
-        }
-    </script>
 </body>
 </html>
