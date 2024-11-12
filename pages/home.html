@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/frame.css">
     <link rel="stylesheet" href="../css/home.css">
     <script defer src="../javascript/home.js"></script>
+
 </head>
 <body>
     <div class="title-bar">
@@ -20,10 +21,30 @@
     </div>
 
     <!-- Square buttons rotated to look like diamonds -->
-    <div id="top-left" class="square-button" onclick="hitButton()"></div>
-    <div id="top-right" class="square-button" onclick="hitButton()"></div>
-    <div id="bottom-left" class="square-button" onclick="hitButton()"></div>
-    <div id="bottom-right" class="square-button" onclick="hitButton()"></div>
+    <div class="diamond-container">
+        <div id="top-left" class="square-button" onclick="hitButton()"></div>
+        <div id="top-right" class="square-button" onclick="hitButton()"></div>
+        <div id="bottom-left" class="square-button" onclick="hitButton()"></div>
+        <div id="bottom-right" class="square-button" onclick="hitButton()"></div>
+    </div>
+
+    <!-- Centered title text -->
+    <div class="center-content">
+        <h2>Select</h2>
+        <h2>Your Sport</h2>
+    </div>
+
+    <!-- Icon circle container -->
+    <div class="icon-circle">
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Soccer"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Basketball"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Baseball"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Tennis"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Football"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Swimming"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Hockey"></div>
+        <div class="icon-button" onclick="hitButton()"><img src="../images/basketball.png" alt="Volleyball"></div>
+    </div>
 
     <!-- Centered title text -->
     <div class="center-content">
@@ -45,4 +66,3 @@
 
 </body>
 </html>
-
