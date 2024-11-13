@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter page for your web application">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script defer src="../javascript/cart.js"></script>
+</head>
+<body>
+    <div class="title-bar">
+        <h1>NextGen Sports</h1>
+    </div>
+
+    <!-- Square buttons rotated to look like diamonds -->
+    <div id="top-left" class="square-button" onclick="hitButton()"></div>
+    <div id="top-right" class="square-button" onclick="hitButton()"></div>
+
+    <div class="image-container">
+        <!-- Image section -->
+        <img src="../images/cart.jpg" alt="Shopping Cart" class="main-image">
+
+        <!-- Button container where dynamically generated buttons will go -->
+        <div id="button-container" class="button-container"></div>
+
+        <!-- Go to CheckOut Button below the button container -->
+        <button id="checkout-button" class="checkout-button">Go to CheckOut</button>
+
+        <!-- Recommendations text below the checkout button -->
+        <p id="recommendations-text" class="recommendations-text">Recommendations</p>
+    </div>
+</body>
+</html>

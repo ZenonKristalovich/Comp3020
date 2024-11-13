@@ -1,0 +1,117 @@
+/* Allow scrolling for the body */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Use the full height of the viewport */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.image-container {
+    width: 90%; /* Use a percentage to make the container width flexible */
+    height: auto; /* Adjust height to fit the content */
+    margin: 100px auto; /* Adjust the top margin as needed */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: flex-start; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    position: relative; /* Ensure proper stacking context */
+}
+
+/* Styles for the image */
+.main-image {
+    max-width: 20%; /* Adjust the width as needed */
+    max-height: 20%; /* Adjust the height as needed */
+    object-fit: contain; /* Maintain the image aspect ratio */
+    padding-left: 0; /* Remove any horizontal padding */
+    padding-top: 0; /* Keep or adjust the vertical padding */
+    margin-left: 0; /* Ensure no margin on the left */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 20px; /* Space between buttons (adjust as needed) */
+    padding: 10px; /* Add padding for some spacing */
+}
+
+.action-button-container {
+    width: 150px; /* Set the width of each button */
+    height: 200px; /* Set the height */
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #f5f5f5; /* Light background for buttons */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for styling */
+    overflow: hidden;
+}
+
+.button-image {
+    width: 100%; /* Image fills the top part of the button */
+    height: 75%; /* Adjust the height of the image */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    transition: transform 0.3s ease; /* Adds a subtle zoom-in effect */
+}
+
+.button-image:hover {
+    transform: scale(1.05); /* Subtle zoom effect when hovering over the image */
+}
+
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the +/- buttons */
+    margin-top: 10px; /* Space between the label and the buttons */
+}
+
+.action-button {
+    flex: 1; /* This allows the button to stretch and fill available space */
+    padding: 10px 20px; /* Adjust padding for button size */
+    background-color: #007BFF; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    display: block; /* Make it a block-level element */
+}
+
+.action-button:hover {
+    background-color: #0056b3; /* Darker background on hover */
+}
+
+.amount-display {
+    font-size: 16px;
+    color: #333;
+}
+
+.checkout-button {
+    width: 80%;
+    height: 100px;
+    margin-top: 20px; /* Add space above the button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #007BFF; /* Blue background */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.checkout-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.recommendations-text {
+    font-size: 48px; /* Adjust the font size */
+    font-weight: bold; /* Optional: make the text bold */
+    margin-top: 50px; /* Space above the text */
+    color: #ffffff; /* Adjust the text color */
+    text-align: center; /* Center the text */
+}
