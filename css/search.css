@@ -70,3 +70,10 @@ body {
 #results h3 {
     margin-top: 0;
 }
+
+/* body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Use the full height of the viewport /
+    overflow-y: auto; /* Enable vertical scrolling */
+/*} 
