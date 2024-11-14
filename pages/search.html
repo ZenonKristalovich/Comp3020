@@ -28,10 +28,32 @@
         <!-- Filter Section -->
         <div id="filter">
             <h3>Filter Options</h3>
+            <label for="sports-filter">Sports:</label>
+            <select id="sports-filter">
+                <option value="all">All Sports</option>
+                <option value="football">Football</option>
+                <option value="swimming">Soccer</option>
+                <option value="swimming">Ice Hockey</option>
+                <option value="basketball">Basketball</option>
+                <option value="running">Track</option>
+                <option value="swimming">Baseball</option>
+                <option value="swimming">Golf</option>
+            </select>
+            
+            <label for="gender-filter">Gender:</label>
+            <select id="gender-filter">
+                <option value="all">All Genders</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="unisex">Unisex</option>
+            </select>
+            
+            <label for="price-slider">Price Range: $<span id="price-value">500</span></label>
+            <input type="range" id="price-slider" min="0" max="1000" value="500" step="10" oninput="updatePrice()">
             <ul>
-                <li><input type="checkbox" id="filter1"> <label for="filter1">Sport</label></li>
-                <li><input type="checkbox" id="filter2"> <label for="filter2">Gender</label></li>
-                <li><input type="checkbox" id="filter3"> <label for="filter3">Price</label></li>
+                <li><input type="checkbox" id="filter1"> <label for="filter1">Jersey</label></li>
+                <li><input type="checkbox" id="filter2"> <label for="filter2">Equipment</label></li>
+                <li><input type="checkbox" id="filter3"> <label for="filter3">Filter 3</label></li>
             </ul>
         </div>
         
