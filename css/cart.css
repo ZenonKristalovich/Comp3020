@@ -114,10 +114,10 @@ body {
     height: 100px;
     margin-top: 20px; /* Add space above the button */
     padding: 10px 20px; /* Button padding */
-    background-image: url('../images/sport_banner.jpg'); /* Path to your background image */
+    background-image: url('../images/checkout_button.png'); /* Path to your background image */
     background-size: cover; /* Makes the image cover the entire button */
     background-position: center; /* Centers the image */
-    color: rgb(0, 0, 0); /* Text color */
+    color: rgb(255, 255, 255); /* Text color */
     border: 5px; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     font-size: 54px; /* Font size */
@@ -136,6 +136,6 @@ body {
     font-size: 48px; /* Adjust the font size */
     font-weight: bold; /* Optional: make the text bold */
     margin-top: 50px; /* Space above the text */
-    color: #ffffff; /* Adjust the text color */
+    color: #000000; /* Adjust the text color */
     text-align: center; /* Center the text */
 }
