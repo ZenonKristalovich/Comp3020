@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
+    margin-bottom: 400px
 }
 
 #search-bar {
@@ -25,7 +26,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 220px;
+    margin-top: 160px;
 }
 
 #search-bar input[type="text"] {
@@ -56,6 +57,7 @@ body {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 5px;
+    background-color: #ffffff
 }
 
 #filter h3 {
@@ -84,13 +86,25 @@ body {
 #results {
     flex: 3;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px;
     border-radius: 5px;
     /*margin-top: 160px;*/
 }
 
 #results h3 {
     margin-top: 0;
+}
+
+.ball-icon {
+    width: 100px;    /* Adjust the size of the icon */
+    height: 100px;   /* Keeps the icon square */
+    margin: 10px;    /* Adds space around the icon */
+    cursor: pointer; /* Shows a pointer cursor when hovering over the icon */
+    transition: transform 0.2s; /* Adds a little animation effect on hover */
+}
+
+.ball-icon:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon when hovered */
 }
 
 /* body {

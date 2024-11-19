@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Starter page for your web application">
-    <title>Home Page</title>
+    <title>Search products</title>
     <link rel="stylesheet" href="../css/frame.css">
     <link rel="stylesheet" href="../css/search.css">
     <script defer src="scripts.js"></script>
 </head>
 <body>
     <div class="title-bar">
-        <h1>Nextgen Sports</h1>
+        <h1 class="home-btn" onclick="goHome()">Nextgen Sports</h1>
     </div>
 
     <!-- Square buttons rotated to look like diamonds -->
@@ -61,6 +61,12 @@
         <div id="results">
             <h3>Search Results</h3>
             <!-- Content for search results goes here -->
+            <a href="basketball.html">
+                <img src="../images/bball.jpg" alt="Basketball" class="ball-icon">
+            </a>
+            <a href="football.html">
+                <img src="../images/soccball.jpeg" alt="Football" class="ball-icon">
+            </a>
         </div>
     </div>
 
@@ -68,6 +74,37 @@
         function hitButton() {
             alert('You hit a button');
         }
+
+        function updatePrice() {
+            const priceValue = document.getElementById('price-slider').value;
+            document.getElementById('price-value').textContent = priceValue;
+        }
+
+        function goHome(){
+            window.location.href = 'home.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if a sport was selected and stored in local storage
+            const selectedSport = localStorage.getItem('selectedSport');
+
+            if (selectedSport) {
+                // If a sport was clicked, set the default value in the sports filter
+                const sportsFilter = document.getElementById('sports-filter');
+                sportsFilter.value = selectedSport.toLowerCase(); // Set the filter to the selected sport
+                
+                // Optionally, you can trigger search results based on the selected sport here
+                loadSearchResults(selectedSport);
+            }
+
+            function loadSearchResults(sport) {
+            // This function would handle loading the search results based on the selected sport
+            // For now, we can just show a placeholder message
+            document.getElementById('results').innerHTML = `<p>Showing results for ${sport}</p>`;
+        }
+        });
+
+
     </script>
 </body>
 </html>
