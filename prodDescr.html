@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Item description page for the sports shop">
+    <title>Item Description</title>
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/prodDescr.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <div class="title-bar">
+        <h1>NextGen Sports</h1>
+    </div>
+
+    <div class="container">
+        <!-- Item Details Section -->
+        <div class="item-details">
+            <div class="item-image">
+                <img src="../images/basketballl.png" alt="Sample Sports Item">
+            </div>
+            <div class="item-info">
+                <h2>Item Name</h2>
+                <p class="price">$150.00</p>
+                <p class="description">This high-quality sports item is designed to enhance your performance and comfort. Ideal for both amateur and professional athletes.</p>
+
+                <!-- Item Attributes -->
+                <ul>
+                    <li>Sport: Basketball</li>
+                    <li>Size: XS, S, M, L, XL</li>
+                    <li>Color: Red, Blue</li>
+                    <li>Gender: Unisex</li>
+                </ul>
+
+                <!-- Purchase Section -->
+                <div class="purchase-options">
+                    <label for="size-select">Select Size:</label>
+                    <select id="size-select">
+                    	<option value="XS">XS</option>
+                    	<option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+
+                    <button type="button" class="buy-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function hitButton() {
+            alert('You hit a button');
+        }
+    </script>
+</body>
+</html>
