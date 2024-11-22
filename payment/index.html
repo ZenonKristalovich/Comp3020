@@ -1,0 +1,173 @@
+<!---below gtml code is based on code inspired from this website 
+https://codehalweb.com/responsive-payment-gateway-form-design-using-html-and-css/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="content-wrapper">
+            <form id="payment-form">
+                <!-- Shipping Section -->
+                <section class="shipping-section">
+                    <h3>Shipping Address</h3>
+                    <div class="input-box">
+                        <label for="shipping-fullname">Full Name:</label>
+                        <input type="text" id="shipping-fullname" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="shipping-email">Email:</label>
+                        <input type="email" id="shipping-email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="shipping-address">Address:</label>
+                        <input type="text" id="shipping-address" placeholder="Apt/House No - Street Name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="shipping-city">City:</label>
+                        <input type="text" id="shipping-city" placeholder="City" required>
+                    </div>
+                    <div class="input-flex">
+                        <div class="input-box">
+                            <label for="shipping-province">Province:</label>
+                            <input type="text" id="shipping-province" placeholder="Province" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="shipping-postal">Postal Code:</label>
+                            <input type="text" id="shipping-postal" placeholder="A1A 1A1" required>
+                        </div>
+                    </div>
+                </section>
+                <!-- Billing Section -->
+                <section class="billing-section">
+                    <h3>Billing Address</h3>
+                    <div class="input-box">
+                        <label for="billing-fullname">Full Name:</label>
+                        <input type="text" id="billing-fullname" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="billing-email">Email:</label>
+                        <input type="email" id="billing-email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="billing-address">Address:</label>
+                        <input type="text" id="billing-address" placeholder="Apt/House No - Street Name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="billing-city">City:</label>
+                        <input type="text" id="billing-city" placeholder="City" required>
+                    </div>
+                    <div class="input-flex">
+                        <div class="input-box">
+                            <label for="billing-province">Province:</label>
+                            <input type="text" id="billing-province" placeholder="Province" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="billing-postal">Postal Code:</label>
+                            <input type="text" id="billing-postal" placeholder="A1A 1A1" required>
+                        </div>
+                    </div>
+                </section>
+                <!-- Payment Section -->
+                <section class="payment-section">
+                    <h3>Payment</h3>
+                    <div class="input-box">
+                        <img src="./imgcards.png" alt="payment options">
+                    </div>
+                    <div class="input-box">
+                        <label for="cardname">Name on Card:</label>
+                        <input type="text" id="cardname" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="cardnumber">Credit Card Number:</label>
+                        <input type="text" id="cardnumber" placeholder="1111 2222 3333 4444" maxlength="19" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="expmonth">Exp. Month:</label>
+                        <select id="expmonth" required>
+                            <option value="" disabled selected>Select Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    <div class="input-flex">
+                        <div class="input-box">
+                            <label for="expyear">Exp. Year:</label>
+                            <select id="expyear" required>
+                                <option value="" disabled selected>Select Year</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                                <option value="2031">2030</option>
+                                <option value="2032">2030</option>
+                                <option value="2033">2030</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" placeholder="CVV" required>
+                        </div>
+                    </div>
+                </section>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <!-- Cart Summary Section -->
+            <aside class="cart-summary">
+                <h3>Cart Summary</h3>
+                <div class="cart-item">
+                    <p>Item 1</p>
+                    <p>$25.00</p>
+                </div>
+                <div class="cart-item">
+                    <p>Item 2</p>
+                    <p>$15.00</p>
+                </div>
+                <div class="cart-item">
+                    <p>Item 3</p>
+                    <p>$10.00</p>
+                </div>
+                <hr>
+                <div class="promo-code">
+                    <label for="promo-code">Promo Code:</label>
+                    <input type="text" id="promo-code" placeholder="Enter promo code">
+                    <button id="apply-promo" class="btn">Apply</button>
+                </div>
+                <hr>
+                <div class="cart-total">
+                    <p><strong>Total:</strong></p>
+                    <p><strong>$50.00</strong></p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="dialog-overlay" id="dialog-overlay">
+        <div class="dialog-box">
+            <p id="dialog-message">Payment Successful!</p>
+            <button onclick="goHome()">Home</button>
+            <button id="retry-button" onclick="retry()">Try Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
