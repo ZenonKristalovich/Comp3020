@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /*padding-left: 20px;*/
     height: 100vh; /* Use the full height of the viewport */
     overflow-y: auto; /* Enable vertical scrolling */
 }
@@ -26,7 +27,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: 160px;
+    margin-top: 200px;
 }
 
 #search-bar input[type="text"] {
@@ -53,9 +54,13 @@ body {
 #filter {
     flex: 1 25%;
     max-width: 200px;
+    margin-left: 80px;
     margin-right: 20px;
+    margin-bottom: 160px;
     border: 1px solid #ddd;
     padding: 10px;
+    padding-left: 20px;
+    padding-bottom: 40px;
     border-radius: 5px;
     background-color: #ffffff
 }
@@ -83,30 +88,79 @@ body {
     width: 100%;
 }
 
+#filter input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px; /* Adds spacing above the date selector */
+}
+
 #results {
     flex: 3;
     padding: 10px;
-    border: 1px;
+    margin-top: 40px;
+    border: 1px transparent;
     border-radius: 5px;
-    /*margin-top: 160px;*/
+    background-color: transparent; /* Make the background transparent */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between product items */
 }
 
-#results h3 {
-    margin-top: 0;
-}
 
-.ball-icon {
-    width: 100px;    /* Adjust the size of the icon */
-    height: 100px;   /* Keeps the icon square */
-    margin: 10px;    /* Adds space around the icon */
-    cursor: pointer; /* Shows a pointer cursor when hovering over the icon */
+.product-item {
+    width: 150px; /* Set a smaller width for the product card */
+    height: 220px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a card-like effect */
+    background-color: #fff;
     transition: transform 0.2s; /* Adds a little animation effect on hover */
 }
 
-.ball-icon:hover {
-    transform: scale(1.1); /* Slightly enlarges the icon when hovered */
+.product-item:hover {
+    transform: scale(1.05); /* Slightly enlarges the item on hover */
 }
 
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#soccer{
+    height: auto;
+    width: 80%;
+}
+
+.product-details {
+    padding: 5px 0;
+}
+
+.product-price {
+    font-size: 16px; /* Reduced font size */
+    font-weight: bold;
+    color: #333;
+}
+
+.add-to-cart {
+    padding: 8px 12px; /* Smaller button size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Reduced font size */
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Darken the button on hover */
+}
 /* body {
     margin: 0;
     padding: 0;

@@ -29,15 +29,15 @@
         <div id="filter">
             <h3>Filter Options</h3>
             <label for="sports-filter">Sports:</label>
-            <select id="sports-filter">
+            <select id="sports-filter" onchange="filterBySport()">
                 <option value="all">All Sports</option>
                 <option value="football">Football</option>
-                <option value="swimming">Soccer</option>
-                <option value="swimming">Ice Hockey</option>
+                <option value="soccer">Soccer</option>
+                <option value="hockey">Ice Hockey</option>
                 <option value="basketball">Basketball</option>
                 <option value="running">Track</option>
-                <option value="swimming">Baseball</option>
-                <option value="swimming">Golf</option>
+                <option value="baseball">Baseball</option>
+                <option value="golf">Golf</option>
             </select>
             
             <label for="gender-filter">Gender:</label>
@@ -49,36 +49,81 @@
             </select>
             
             <label for="price-slider">Price Range: $<span id="price-value">500</span></label>
-            <input type="range" id="price-slider" min="0" max="1000" value="500" step="10" oninput="updatePrice()">
+            <input type="range" id="price-slider" min="0" max="1000" value="500" step="10" oninput="filterByPrice()">
             <ul>
                 <li><input type="checkbox" id="filter1"> <label for="filter1">Jersey</label></li>
                 <li><input type="checkbox" id="filter2"> <label for="filter2">Equipment</label></li>
-                <li><input type="checkbox" id="filter3"> <label for="filter3">Filter 3</label></li>
+                <li><label for="release-date">Release Date:</label>
+                    <input type="date" id="release-date" name="release-date"></li>
             </ul>
         </div>
         
         <!-- Search Results Section -->
         <div id="results">
-            <h3>Search Results</h3>
-            <!-- Content for search results goes here -->
-            <a href="basketball.html">
-                <img src="../images/bball.jpg" alt="Basketball" class="ball-icon">
-            </a>
-            <a href="football.html">
-                <img src="../images/soccball.jpeg" alt="Football" class="ball-icon">
-            </a>
+            
+            <!-- Product Item 1: Basketball -->
+            <div class="product-item" data-price="29.99" data-sport="basketball">
+                <img src="../images/bball.jpg" alt="Basketball" class="product-image">
+                <div class="product-details">
+                    <h4>Basketball</h4>
+                    <p class="product-price">$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        
+            <!-- Product Item 2: Football -->
+            <div class="product-item" data-price="24.99" data-sport="soccer">
+                <img src="../images/soccball.jpeg" alt="Football" class="product-image" id="soccer">
+                <div class="product-details">
+                    <h4>Football</h4>
+                    <p class="product-price">$24.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
         </div>
-    </div>
 
     <script>
         function hitButton() {
             alert('You hit a button');
         }
 
-        function updatePrice() {
-            const priceValue = document.getElementById('price-slider').value;
-            document.getElementById('price-value').textContent = priceValue;
-        }
+        // Filter by both price and sport
+    function filterProducts() {
+        // Get selected price from the slider
+        const selectedPrice = parseFloat(document.getElementById('price-slider').value);
+        
+        // Update the price value display
+        document.getElementById('price-value').textContent = selectedPrice;
+
+        // Get selected sport from the dropdown
+        const selectedSport = document.getElementById('sports-filter').value;
+
+        // Get all product items
+        const products = document.querySelectorAll('.product-item');
+
+        // Loop through each product and determine if it should be visible
+        products.forEach(product => {
+            const productPrice = parseFloat(product.getAttribute('data-price'));
+            const productSport = product.getAttribute('data-sport');
+
+            // Determine visibility based on selected filters
+            if ((selectedSport === 'all' || productSport === selectedSport) && productPrice <= selectedPrice) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    }
+
+    // Filter by price when the slider changes
+    function filterByPrice() {
+        filterProducts();
+    }
+
+    // Filter by sport when the dropdown changes
+    function filterBySport() {
+        filterProducts();
+    }
 
         function goHome(){
             window.location.href = 'home.html';
@@ -99,10 +144,10 @@
 
             function loadSearchResults(sport) {
             // This function would handle loading the search results based on the selected sport
-            // For now, we can just show a placeholder message
             document.getElementById('results').innerHTML = `<p>Showing results for ${sport}</p>`;
         }
         });
+
 
 
     </script>
