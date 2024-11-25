@@ -1,0 +1,132 @@
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: 'Copperplate Gothic', 'Georgia', serif;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 0;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Content container */
+.content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    gap: 20px; /* Space between filter and search bar */
+    height: calc(100vh - 40px);
+    margin-top: 200px; 
+}
+
+/* Filter Bar Styling */
+.filter-bar {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between filter items */
+    width: 300px; /* Fixed width for the filter bar */
+    background-color: #b8b8b8;
+    padding: 15px;
+    border-radius: 15px;
+    overflow: visible; /* Ensure all content is visible */
+    height: auto; /* Let the height adjust based on the content */
+}
+
+
+/* Individual Filter Item */
+.filter-item {
+    display: flex;
+    flex-direction: column;  /* Stack label and input vertically */
+    gap: 10px; /* Space between label and input */
+}
+
+/* Label styling */
+.filter-item label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Price Slider Styling */
+.price-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#price-slider {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Release Date Styling */
+.release-date-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#release-date {
+    width: 100%;
+    padding: 5px;
+}
+
+/* Search Section Styling */
+.search-section {
+    display: flex;
+    flex-direction: column; /* Stack results under the search bar */
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+/* Search Bar Styling */
+#search-bar {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    align-items: center; /* Ensure the input and button are aligned */
+    margin-bottom: 20px;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensures inner elements respect rounded corners */
+    width: 100%;
+    max-width: 800px; /* Optional: Limit width for readability */
+}
+
+/* Search Bar Input and Button */
+.bar {
+    flex: 1; /* Allow input to take available space */
+    padding: 12px; /* Increase padding for better height */
+    border: none;
+    font-size: 16px; /* Adjust font size */
+    border-radius: 3px 0 0 3px; /* Rounded left corners */
+}
+
+.search-btn {
+    padding: 12px 20px; /* Increase padding for better height */
+    border: none;
+    border-radius: 0 3px 3px 0; /* Rounded right corners */
+    background-color: #a00606;
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size */
+}
+
+
+/* Optional: Add hover effect for the search button */
+.search-btn:hover {
+    background-color: #8b1111;
+}
+
+/* Remove bullets from checkbox list */
+ul {
+    list-style-type: none; /* Removes default bullets */
+    padding-left: 0; /* Removes any left padding */
+}
+
+/* Style for each checkbox list item */
+li {
+    display: flex;
+    align-items: center; /* Align checkbox and label horizontally */
+    gap: 5px; /* Space between checkbox and label */
+}

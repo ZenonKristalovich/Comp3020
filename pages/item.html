@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Item display page">
+    <title>Item Display</title>
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/item.css">
+    <script defer src="../javascript/item.js"></script>
+</head>
+
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h1 onclick="window.location.href='home.html'" class="title-text">NextGen Sports</h1>
+    </div>
+
+    <!-- Navigation (Square buttons rotated to look like diamonds) -->
+    <div class="diamond-container">
+        <div id="top-left" class="square-button" onclick="go_search('')"></div>
+        <div id="top-right" class="square-button" onclick="go_cart()"></div>
+    </div>
+
+    <!-- Item Display Section -->
+    <div id="item-display-container">
+
+        <!-- Left Container: Image and Product Info -->
+        <div class="image-container">
+            <!-- Left: Image -->
+            <div id="item-image">
+                <img id="item-image-img" src="" alt="Item Image">
+            </div>
+
+            <!-- Middle: Product Information -->
+            <div id="item-info">
+                <h2 id="item-name">Sample Item</h2>
+                <p id="item-cost" data-cost="50">Price: $50</p>
+                <p id="item-seller">Source for Sports</p>
+            </div>
+        </div>
+
+        <!-- Right: Quantity, Size, Total Cost, and Add to Cart -->
+        <div id="item-right-container">
+            <div id="item-right">
+                <div id="item-amount">
+                    <label for="quantity">Quantity: </label>
+                    <input type="number" id="quantity" min="1" value="1" onchange="updateTotalCost()">
+                </div>
+
+                <div id="item-sizes">
+                    <label for="size">Size:</label>
+                    <div>
+                        <label for="size-s">S <input type="radio" id="size-s" name="size" value="S"></label>
+                        <label for="size-m">M <input type="radio" id="size-m" name="size" value="M"></label>
+                        <label for="size-l">L <input type="radio" id="size-l" name="size" value="L"></label>
+                        <label for="size-xl">XL <input type="radio" id="size-xl" name="size" value="XL"></label>
+                    </div>
+                </div>
+
+                <div id="total-cost">
+                    <p>Total Cost: <span id="total-cost-value">$50</span></p>
+                </div>
+
+                <button id="add-to-cart-btn" onclick="add_to_cart()">Add to Cart</button>
+            </div>
+        </div>
+
+    <!-- Item Description Section -->
+    <div id="item-description-container">
+        <div id="item-description">
+            <h3>Description</h3>
+            <p id="description-text">
+                Here lies the description for the item above. We will display here a bunch of different information about the item that is being viewed. 
+                This item is crafted with high-quality materials, ensuring durability and longevity. The fabric is made from a blend of premium synthetic fibers, 
+                designed to withstand the wear and tear of even the most active lifestyles. Whether you're an athlete, a fitness enthusiast, or simply someone who 
+                appreciates comfort and quality, this item will serve you well for years to come.
+            </p>
+            <p id="description-text">
+                The design of the item was specifically tailored for those who demand the best from their gear. It features advanced moisture-wicking technology 
+                to keep you dry and comfortable, even during the most intense workouts. The breathable fabric allows for maximum airflow, reducing heat buildup 
+                and ensuring you stay cool during outdoor activities. Additionally, the material is treated with a special coating that repels dirt, stains, and 
+                water, so you don't have to worry about spills or accidents.
+            </p>
+            <p id="description-text">
+                Customers who have used this item in the past have found it to be incredibly versatile. It has been a favorite among professional athletes 
+                for its performance-enhancing features, but it is also highly popular among recreational users for its casual, stylish design. Whether it's being 
+                worn for a morning jog, an afternoon workout, or just for everyday casual wear, the item offers a perfect balance of functionality and fashion.
+            </p>
+            <p id="description-text">
+                One of the standout features of this product is its custom-fit design. The available sizes range from small to extra-large, ensuring a comfortable 
+                fit for people of all body types. The ergonomic design also promotes freedom of movement, making it ideal for a wide range of activities such as 
+                running, cycling, yoga, or weight training.
+            </p>
+            <p id="description-text">
+                What makes this item truly great is not just its looks or functionality, but its commitment to sustainability. The production process minimizes waste, 
+                and the materials used are environmentally friendly, ensuring that you're making a responsible choice for both your fitness goals and the planet.
+            </p>
+            <p id="description-text">
+                Overall, this item is a perfect combination of form, function, and sustainability. Whether you're looking for performance gear for your next big 
+                event or just something comfortable to wear during a workout, this item will exceed your expectations. Don't miss out on the opportunity to own 
+                this must-have piece of athletic wear.
+            </p>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

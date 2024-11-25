@@ -49,12 +49,12 @@ main {
 }
 
 /* Positioning the squares as diamonds in the corners */
-#top-left {
+#top-left,#top-left-false {
     top: -150px; 
     left: -150px; 
 }
 
-#top-right {
+#top-right,#top-right-false {
     top: -150px; 
     right: -150px; 
 }
@@ -141,6 +141,19 @@ main {
     z-index: 1; /* Ensure it's above the background */
 }
 
+.title-text {
+    display: inline-block; /* Ensures it behaves like a button but only for the text */
+    color: #ffffff; /* Text color */
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.title-text:hover {
+    transform: scale(1.1); /* Enlarges only the text */
+
+}
+
 /* Style for the buttons */
 .side-button {
     background-color: #393636; 
@@ -169,4 +182,57 @@ main {
 /* Button hover effect */
 .side-button:hover {
     background-color: #4a4848; 
+}
+
+/*FALSE AREAS*/
+
+/* Specific text for #top-left-false */
+#top-left-false::after {
+    content: 'Search';
+    font-size: 36px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(75%, 0%) rotate(-90deg);
+    color: rgb(92, 92, 92); /* Default color for #top-left-false text */
+}
+
+
+/* Title text behavior for hover */
+.title-text:hover {
+    transform: scale(1.1); /* Enlarges only the text */
+    color: gray; /* Change text color to gray on hover */
+}
+
+/* Reset the hover effect on square button for #top-left-false */
+.square-button#top-left-false:hover {
+    transform: rotate(45deg); /* No scaling effect */
+    background-image: url('../images/red_button.jpg'); /* Keep the original background */
+}
+
+/* Modify button text color for #top-left-false */
+#top-left-false .title-text {
+    color: gray; /* Change text color to gray */
+}
+
+/* Specific text for #top-left-false */
+#top-right-false::after {
+    content: 'Cart';
+    font-size: 36px;
+    font-weight: bold;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(0%, 290%) rotate(0deg);
+    color: rgb(92, 92, 92); /* Default color for #top-left-false text */
+}
+
+/* Reset the hover effect on square button for #top-left-false */
+.square-button#top-right-false:hover {
+    transform: rotate(45deg); /* No scaling effect */
+    background-image: url('../images/red_button.jpg'); /* Keep the original background */
+}
+
+/* Modify button text color for #top-left-false */
+#top-left-right .title-text {
+    color: gray; /* Change text color to gray */
 }

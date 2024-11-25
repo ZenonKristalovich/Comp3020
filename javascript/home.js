@@ -12,3 +12,17 @@ function getFilter() {
     alert(data)
     return data ? data : 'No data found';
 }
+
+function go_search(text){
+    if(text === ""){
+        localStorage.removeItem('filter');
+    }else{
+        localStorage.setItem('filter', text);
+    }
+    window.location.href = "search.html";
+}
+
+function go_cart(){
+    // Clears all localStorage data
+    window.location.href = "cart.html";
+}

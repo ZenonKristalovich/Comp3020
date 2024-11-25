@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Starter page for your web application">
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/frame.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script defer src="../javascript/cart.js"></script>
+</head>
+<body>
+    <div class="title-bar">
+        <h1 onclick="window.location.href='home.html'" class="title-text">NextGen Sports</h1>
+    </div>
+
+    <!-- Square buttons rotated to look like diamonds -->
+    <div class="diamond-container">
+        <div id="top-left" class="square-button" onclick="go_search('')"></div>
+        <div id="top-right-false" class="square-button"></div>
+    </div>
+
+    <div class="image-container">
+        <div class="title-container">
+            <p class="title_text">Your</p>
+            <img src="../images/cart.png" alt="Shopping Cart" class="main-image">
+            <p class="title_text">Items</p>
+        </div>
+
+        <!-- Cart items will be dynamically inserted here -->
+        <div id="cart-items-container" class="button-container"></div>
+        
+        <!-- Total cost and Checkout -->
+        <div id="total-container">
+            <p id="total-cost" class="recommendations-text"></p>
+            <button id="checkout-button" class="checkout-button" onclick="check_out()">Go to CheckOut</button>
+        </div>
+
+        <p id="recommendations-text" class="recommendations-text">Recommendations</p>
+
+        <div class="recommended-section">
+            <div class="item-display" onclick="handleItemClick(1)">
+                <img 
+                    src="../images/basketball.png" 
+                    alt="basketball" 
+                    class="product-image"
+                >
+                <div class="product-details">
+                    <h4>Basketball</h4>
+                    <p class="product-price">$29.99</p>
+                </div>
+            </div>
+            <div class="item-display" onclick="handleItemClick(14)">
+                <img 
+                    src="../images/boxing_gloves.jpg" 
+                    alt="golf bag" 
+                    class="product-image"
+                >
+                <div class="product-details">
+                    <h4>Boxing Gloves</h4>
+                    <p class="product-price">$59.99</p>
+                </div>
+            </div>
+            <div class="item-display" onclick="handleItemClick(3)">
+                <img 
+                    src="../images/hockey_stick.png" 
+                    alt="hockey stick" 
+                    class="product-image"
+                >
+                <div class="product-details">
+                    <h4>Hockey Stick</h4>
+                    <p class="product-price">$59.99</p>
+                </div>
+            </div>
+            <div class="item-display" onclick="handleItemClick(5)">
+                <img 
+                    src="../images/volleyball.png" 
+                    alt="volleyball" 
+                    class="product-image"
+                >
+                <div class="product-details">
+                    <h4>Volleyball</h4>
+                    <p class="product-price">$19.99</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</body>
+</html>
