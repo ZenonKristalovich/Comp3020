@@ -73,7 +73,7 @@ body {
     width: 20px;             
     height: 20px;            
     border-radius: 50%;       
-    background: #680303;  
+    background: #a70404;  
     cursor: pointer;     
     margin-top: -5px; /* Adjust thumb position to align with track */
 }
@@ -82,20 +82,20 @@ body {
 #price-slider::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #c20a0a;   
+    background: #680303;   
     cursor: pointer;
     margin-top: -5px; /* Adjust thumb position to align with track */
 }
 
 /* Style for the slider track */
 #price-slider::-webkit-slider-runnable-track {
-    background: #c20a0a;
+    background: #680303;
     height: 10px;   
 }
 
 /* Firefox Slider Track */
 #price-slider::-moz-range-track {
-    background: #c20a0a;
+    background: #680303;
     height: 10px;
 }
 
