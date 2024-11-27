@@ -28,7 +28,8 @@ body {
     flex-direction: column;
     gap: 20px; /* Space between filter items */
     width: 300px; /* Fixed width for the filter bar */
-    background-color: #b8b8b8;
+    background-color: #1d1d1d;
+    color:#ffffff;
     padding: 15px;
     border-radius: 15px;
     overflow: visible; /* Ensure all content is visible */

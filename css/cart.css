@@ -54,9 +54,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #bebebe;
+    background-color: #1d1d1d;
     border-radius: 8px;
-    border: 5px solid #bebebe;
+    border: 10px solid #1d1d1d;
+    color: #ffff
 
 }
 
@@ -82,16 +83,24 @@ body {
 .action-button {
     width: 36px;
     height: 36px;
-    background: #313131;
+    background: #a00606;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.action-button:hover{
+    transform: scale(1.05);
 }
 
 .amount-display {
     font-size: 16px;
-    color: #333;
+    font-weight: bold;
+    color: #ffffff;
 }
 
 #total-container {
@@ -163,7 +172,8 @@ body {
     flex-direction: column; /* Stack image and details */
     align-items: center;
     text-align: center;
-    background-color: #b8b8b8;
+    background-color: #1d1d1d;
+    color:#fff;
     border-radius: 10px;
     padding: 15px;
     width: 150px; /* Adjust based on your preference */
@@ -190,5 +200,5 @@ body {
 
 .product-details .product-price {
     font-size: 14px;
-    color: #000000;
+    color: #ffffff;
 }

@@ -14,7 +14,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #b8b8b8;
+    background-color: #1d1d1d;
+    color:#ffffff;
     border-radius: 8px; /* Slightly smaller border radius */
     padding: 8px; /* Reduce padding */
     cursor: pointer;
@@ -43,7 +44,7 @@
 .product-price{
     font-size: 16px; /* Smaller font size for price */
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
     margin-bottom: 8px; /* Add space before button */
 }
 
