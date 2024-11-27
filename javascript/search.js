@@ -125,6 +125,9 @@ function updateCartCount() {
 }
 
 
+
+
+
 // Run the startupFunction when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", startupFunction);
 document.getElementById("release-date").addEventListener("change", filterProducts);
