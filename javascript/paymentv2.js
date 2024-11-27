@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
         <p><strong>$${total.toFixed(2)}</strong></p>
     `;
     cartSummary.appendChild(totalDiv);
+    updateCartCount();
 });
 
 function go_cart(){
@@ -54,3 +55,19 @@ function go_search(text){
     window.location.href = "search.html";
 }
 
+function updateCartCount() {
+    const cartAmountElement = document.querySelector('.amount-in-cart');
+    let itemCount = localStorage.getItem('cart');
+
+    if (itemCount) {
+        // Parse the JSON string into an array
+        const cartArray = JSON.parse(itemCount);
+
+        // If the array has items, set the count, otherwise set to null
+        itemCount = cartArray.length > 0 ? cartArray.length : null;
+    } else {
+        itemCount = null; // Default to null if cart is empty or not set
+    }
+
+    cartAmountElement.textContent = itemCount === null ? "" : itemCount;
+}

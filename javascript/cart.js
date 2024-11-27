@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial cart display
     updateCartDisplay();
+    updateCartCount();
 });
 
 function go_search(text){
@@ -134,4 +135,21 @@ function check_out() {
 function handleItemClick(id) {
     localStorage.setItem('item', id);
     window.location.href = "item.html";
+}
+
+function updateCartCount() {
+    const cartAmountElement = document.querySelector('.amount-in-cart');
+    let itemCount = localStorage.getItem('cart');
+
+    if (itemCount) {
+        // Parse the JSON string into an array
+        const cartArray = JSON.parse(itemCount);
+
+        // If the array has items, set the count, otherwise set to null
+        itemCount = cartArray.length > 0 ? cartArray.length : null;
+    } else {
+        itemCount = null; // Default to null if cart is empty or not set
+    }
+
+    cartAmountElement.textContent = itemCount === null ? "" : itemCount;
 }

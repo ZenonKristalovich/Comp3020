@@ -236,3 +236,15 @@ main {
 #top-left-right .title-text {
     color: gray; /* Change text color to gray */
 }
+
+.amount-in-cart {
+    position: absolute; /* Position relative to the viewport */
+    top: 12px; /* Distance from the top of the screen */
+    right: 20px; /* Distance from the left of the screen */
+    font-size: 3.5em; /* Adjust font size as needed */
+    color: #ffffff; /* Choose a standout color */
+    font-weight: bold; /* Make the text bold */
+    text-align: center; /* Center the text within the element */
+    z-index: 1000; /* Ensure it stays above other elements */
+    pointer-events: none;
+}

@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("No product selected.");
     }
     updateTotalCost()
+    updateCartCount();
 });
 
 // Function to update total cost dynamically
@@ -111,4 +112,23 @@ function add_to_cart() {
 function go_cart(){
     window.location.href = "cart.html";
 }
+
+function updateCartCount() {
+    const cartAmountElement = document.querySelector('.amount-in-cart');
+    let itemCount = localStorage.getItem('cart');
+
+    if (itemCount) {
+        // Parse the JSON string into an array
+        const cartArray = JSON.parse(itemCount);
+
+        // If the array has items, set the count, otherwise set to null
+        itemCount = cartArray.length > 0 ? cartArray.length : null;
+    } else {
+        itemCount = null; // Default to null if cart is empty or not set
+    }
+
+    cartAmountElement.textContent = itemCount === null ? "" : itemCount;
+}
+
+
 
