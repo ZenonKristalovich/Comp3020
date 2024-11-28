@@ -35,8 +35,11 @@ function updateCartCount() {
         // Parse the JSON string into an array
         const cartArray = JSON.parse(itemCount);
 
+        // Using reduce
+        const totalAmount = cartArray.reduce((sum, item) => sum + (item.amount || 0), 0);
+
         // If the array has items, set the count, otherwise set to null
-        itemCount = cartArray.length > 0 ? cartArray.length : null;
+        itemCount = totalAmount > 0 ? totalAmount : null;
     } else {
         itemCount = null; // Default to null if cart is empty or not set
     }

@@ -81,36 +81,4 @@ document.addEventListener("DOMContentLoaded", function () {
         originalTotal += item.price;
     });
     */
-
-    // Display the total cost
-    totalCostElement.innerHTML = `<strong>$${originalTotal.toFixed(2)}</strong>`;
-
-    // Promo code logic
-    const promoCodeInput = document.getElementById("promo-code");
-    const applyPromoButton = document.getElementById("apply-promo");
-    let currentTotal = originalTotal;
-
-    const promoCodes = {
-        SAVE10: 10, // 10% discount
-        SAVE20: 20, // 20% discount
-        SAVE30: 30, // 30% discount
-    };
-
-
-    applyPromoButton.addEventListener("click", function () {
-        const enteredCode = promoCodeInput.value.trim().toUpperCase();
-
-        // Check if promo code is valid
-        if (promoCodes[enteredCode]) {
-            const discountPercentage = promoCodes[enteredCode];
-            const discountAmount = (originalTotal * discountPercentage) / 100;
-            currentTotal = originalTotal - discountAmount;
-
-            // Update total cost in UI
-            totalCostElement.innerHTML = `<strong>$${currentTotal.toFixed(2)}</strong>`;
-            alert(`Promo code applied! You saved ${discountPercentage}%.`);
-        } else {
-            alert("Invalid promo code. Please try again.");
-        }
-    });
 });

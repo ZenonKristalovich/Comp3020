@@ -50,6 +50,10 @@ body {
     font-size: 18px;
 }
 
+.checkbox {
+    font-weight: bold;
+}
+
 /* Price Slider Container */
 .price-slider-container {
     display: flex;
@@ -57,6 +61,7 @@ body {
     align-items: center;
 }
 
+/* Style for the slider */
 #price-slider {
     width: 100%;
     margin-top: 5px;
@@ -64,13 +69,15 @@ body {
     -moz-appearance: none;    
     appearance: none;
     height: 10px; /* Ensure the height of the track is consistent with the thumb */
+    background: #ddd; /* Default track color */
+    border-radius: 5px; /* Optional for rounded track */
 }
 
 /* Style for the slider thumb (dot) */
 #price-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;             
+    width: 20px;              
     height: 20px;            
     border-radius: 50%;       
     background: #a70404;  
@@ -78,26 +85,24 @@ body {
     margin-top: -5px; /* Adjust thumb position to align with track */
 }
 
-/* Firefox Slider Thumb */
-#price-slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #680303;   
-    cursor: pointer;
-    margin-top: -5px; /* Adjust thumb position to align with track */
-}
-
 /* Style for the slider track */
 #price-slider::-webkit-slider-runnable-track {
-    background: #680303;
+    background: #464646;
     height: 10px;   
 }
 
-/* Firefox Slider Track */
-#price-slider::-moz-range-track {
-    background: #680303;
-    height: 10px;
+/* Color the portion of the track where the thumb is */
+#price-slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ce0707 0%, #ce0707 var(--slider-value, 50%), #5e5e5e var(--slider-value, 50%), #5e5e5e 100%);
 }
+
+/* Update the background as the slider value changes */
+#price-slider:active::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #ce0707 0%, #ce0707 var(--slider-value, 50%), #5e5e5e var(--slider-value, 50%), #5e5e5e 100%);
+}
+
+
+
 
 
 

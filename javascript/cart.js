@@ -10,10 +10,16 @@ const products = [
     {id: 9, name: "Hockey Gloves", image: "../images/hockey_gloves.jpg", cost: 49.99, sport: "hockey", releaseDate: "2023-02-15", isJersey: false, isEquipment: true, gender: "unisex"},
     {id: 10, name: "Men's Shoulder Pads", image: "../images/mens_shoulder_pads.jpg", cost: 89.99, sport: "hockey", releaseDate: "2023-03-10", isJersey: false, isEquipment: true, gender: "male"},
     {id: 11, name: "Female Shoulder Pads", image: "../images/female_shoulder_pads.jpg", cost: 79.99, sport: "hockey", releaseDate: "2023-03-20", isJersey: false, isEquipment: true, gender: "female"},
-    {id: 12, name: "Men's Running Shoes", image: "../images/mens_running_shoes.jpg", cost: 89.99, sport: "running", releaseDate: "2023-05-01", isJersey: false, isEquipment: true, gender: "male"},
+    {id: 12, name: "Men's Running Shoes", image: "../images/mens_running_shoes.jpg", cost: 89.99, sport: "running", releaseDate: "2023-11-28", isJersey: false, isEquipment: true, gender: "male"},
     {id: 13, name: "Female Running Shoes", image: "../images/female_running_shoes.jpg", cost: 89.99, sport: "running", releaseDate: "2023-05-01", isJersey: false, isEquipment: true, gender: "female"},
     {id: 14, name: "Boxing Gloves", image: "../images/boxing_gloves.jpg", cost: 59.99, sport: "boxing", releaseDate: "2023-03-10", isJersey: false, isEquipment: true, gender: "unisex"},
     {id: 15, name: "Boxing Hand Wraps", image: "../images/boxing_hand_wraps.jpg", cost: 12.99, sport: "boxing", releaseDate: "2023-03-25", isJersey: false, isEquipment: true, gender: "unisex"},
+    {id: 16, name: "Tennis Racket", image: "../images/tennis_racket.jpg", cost: 99.99, sport: "tennis", releaseDate: "2023-06-15", isJersey: false, isEquipment: true, gender: "unisex"},
+    {id: 17, name: "Tennis Balls (24 Pack)", image: "../images/tennis_balls.jpg", cost: 7.99, sport: "tennis", releaseDate: "2023-11-28", isJersey: false, isEquipment: true, gender: "unisex"},
+    {id: 18, name: "Baseball Bat", image: "../images/baseball_bat.jpg", cost: 29.99, sport: "baseball", releaseDate: "2023-05-15", isJersey: false, isEquipment: true, gender: "unisex"},
+    {id: 19, name: "Baseball Glove", image: "../images/baseball_glove.jpg", cost: 49.99, sport: "baseball", releaseDate: "2023-06-10", isJersey: false, isEquipment: true, gender: "unisex"},
+    {id: 20, name: "Basketball Jersey", image: "../images/basketball_jersey.jpg", cost: 29.99, sport: "basketball", releaseDate: "2023-08-15", isJersey: true, isEquipment: false, gender: "unisex"},
+    {id: 21, name: "Hockey Jersey", image: "../images/hockey_jersey.jpg", cost: 49.99, sport: "hockey", releaseDate: "2023-11-28", isJersey: true, isEquipment: false, gender: "unisex"},
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -79,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                             updateCartData();
                             updateCartDisplay();
+                            updateCartCount();
                         }
                     };
                     buttonGroup.appendChild(minusButton);
@@ -95,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         cartItem.amount += 1;
                         updateCartData();
                         updateCartDisplay();
+                        updateCartCount();
                     };
                     buttonGroup.appendChild(plusButton);
             
@@ -145,8 +153,11 @@ function updateCartCount() {
         // Parse the JSON string into an array
         const cartArray = JSON.parse(itemCount);
 
+        // Using reduce
+        const totalAmount = cartArray.reduce((sum, item) => sum + (item.amount || 0), 0);
+
         // If the array has items, set the count, otherwise set to null
-        itemCount = cartArray.length > 0 ? cartArray.length : null;
+        itemCount = totalAmount > 0 ? totalAmount : null;
     } else {
         itemCount = null; // Default to null if cart is empty or not set
     }

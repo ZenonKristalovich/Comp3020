@@ -10,15 +10,6 @@ body {
     box-sizing: border-box; /* Prevents padding from expanding the height */
 }
 
-
-/* Title bar */
-.title-bar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
 h1 {
     margin: 0;
 }
@@ -36,7 +27,7 @@ h1 {
 
 /* Background containers for left and right sections */
 .background-container {
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #1d1d1d; /* Light gray background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -49,7 +40,7 @@ h1 {
     justify-content: flex-start; /* Align elements to the left */
     align-items: flex-start; /* Align elements at the top */
     gap: 20px; /* Space between image and info */
-    background-color: #b8b8b8;
+    background-color: #1d1d1d;
     border-radius: 15px;
     padding: 20px;
     width: auto; /* Allow the container to adjust based on its content */
@@ -86,24 +77,25 @@ h1 {
 #item-name {
     font-size: 2em;
     margin: 0;
-    color: #000000;
+    color: #ffffff;
 }
 
 #item-cost {
     font-size: 1.5em;
     margin-top: 10px;
-    color: #000000;
+    color: #ffffff;
 }
 
 #item-seller {
     font-size: 1.2em;
     margin-top: 10px;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Right: Quantity, Size, Total Cost, and Add to Cart */
 #item-right-container {
-    background-color: #b8b8b8;
+    background-color: #1d1d1d;
+    color: #ffffff;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -145,11 +137,11 @@ h1 {
 #total-cost {
     margin-top: 20px;
     font-size: 1.2em;
-    color: #000000;
+    color: #ffffff;
 }
 
 #total-cost-value {
-    color: #000000;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -175,7 +167,7 @@ h1 {
     width: 100%; /* Full width */
     padding: 20px;
     margin-top: 20px; /* Space above */
-    background-color: #b8b8b8; /* Light gray background */
+    background-color: #1d1d1d; /* Light gray background */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
@@ -189,13 +181,13 @@ h1 {
 #item-description h3 {
     font-size: 2em;
     font-weight: bold;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Description Text */
 #description-text {
     margin-top: 10px;
-    color: #000000;
+    color: #ffffff;
     font-size: 1em;
     text-indent: 3em; 
     line-height: 1.6;
@@ -229,3 +221,38 @@ h1 {
         font-size: 1.1em;
     }
 }
+
+/* Style for the custom radio button */
+input[type="radio"] {
+    -webkit-appearance: none; /* Remove default appearance */
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px; /* Size of the circle */
+    height: 15px;
+    border-radius: 50%; /* Make it circular */
+    border: 2px solid #ccc; /* Default border color */
+    position: relative;
+    cursor: pointer;
+    background-color: white; /* Default background */
+  }
+  
+  /* Style for the checked state of the radio button */
+  input[type="radio"]:checked {
+    border-color: #9b0000; /* Color of the border when checked */
+    background-color: #9b0000;
+
+  }
+  
+  /* Create the inner "dot" for the checked state */
+  input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 13px; /* Size of the dot */
+    height: 13px;
+    background-color: rgb(192, 0, 0); /* Dot color when checked */
+    border-radius: 50%;
+  }
+  
+  

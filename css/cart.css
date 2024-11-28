@@ -6,9 +6,12 @@ body {
 }
 
 .image-container {
-    width: 90%;
+    width: 60%;
     height: auto;
     margin: 100px auto;
+    background-color: #363636;
+    padding-bottom: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -29,7 +32,7 @@ body {
 .title_text {
     font-size: 60px;
     font-weight: bold;
-    color: #000;
+    color: #ffffff;
     margin: 0 10px; /* Reduce space between elements */
 }
 
@@ -84,7 +87,7 @@ body {
     width: 36px;
     height: 36px;
     background: #a00606;
-    color: #fff;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -115,7 +118,7 @@ body {
 #total-cost {
     font-size: 40px; /* Increase the font size for the total cost */
     font-weight: bold; /* Make it bold for better visibility */
-    color: #000; /* Make sure the text is black or any color you prefer */
+    color: #ffffff; /* Make sure the text is black or any color you prefer */
     margin-bottom: 20px; /* Add space below the total cost text */
 }
 
@@ -124,9 +127,10 @@ body {
     max-width: 600px; /* Set a max-width to prevent it from growing too large */
     height: 120px; /* Increase the height of the button */
     margin-top: 30px; /* Add space above the button */
-    background: url('../images/checkout_button.png') center / cover no-repeat;
+    background-color: #a00606;
+    border-radius: 10px;
     color: #fff;
-    font-size: 28px; /* Make the text slightly larger */
+    font-size: 36px; /* Make the text slightly larger */
     font-family: 'Georgia', serif;
     font-weight: bold;
     cursor: pointer;
@@ -148,7 +152,7 @@ body {
     font-size: 48px;
     font-weight: bold;
     margin-top: 40px;
-    color: #000;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -158,6 +162,7 @@ body {
     padding-bottom: 25px;
     font-size: 40px;
     font-weight: bold;
+    color: #fff;
 }
 
 /* Recommended Section Styling */
