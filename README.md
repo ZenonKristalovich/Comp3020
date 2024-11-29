@@ -11,7 +11,10 @@ Step 2: Open the file called 'home'
 
 Step 3: Browse the website!
 
-Note: Depending on size of your screen there may be changes in site appearance. 
+Notes: 
+Depending on size of your screen there may be changes in site appearance. 
 These are small changes, no need to worry.
 
 Also for Promo codes we currently have 2. SAVE10 which gives a 10% discount and SAVE20 which gives a 20% discount
+
+During checkout, there is random event chance your details will succeed or fail. 50/50. This is to show both situations where a transaction fails or succeeds
